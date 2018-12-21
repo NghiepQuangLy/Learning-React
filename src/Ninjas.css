@@ -1,9 +1,3 @@
-body{
-    background: pink;
-    transition: all 1s;
-}
-
-.ninjasList form{
-    background: white;
-    padding: 20px;
+.ninja{
+    background: pink
 }

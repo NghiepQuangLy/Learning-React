@@ -1,5 +1,6 @@
 import React from 'react';
-import './Ninjas.css'
+import CSSModules from 'react-css-modules';
+import styles from './Ninjas.css';
 
 const Ninjas = ({ninjas, deleteNinja}) => {
     // const ninjasList = ninjas.map(ninja => {
@@ -17,7 +18,7 @@ const Ninjas = ({ninjas, deleteNinja}) => {
 
     const ninjasList = ninjas.map(ninja => {
         return (ninja.age > 20) ? (
-            <div className="ninja" key={ ninja.id }>
+            <div className="ninja" styleName="ninja" key={ ninja.id }>
                  <div>Name: { ninja.name }</div>
                  <div>Age: { ninja.age } </div>
                  <div>Belt: { ninja.belt }</div>
@@ -32,4 +33,4 @@ const Ninjas = ({ninjas, deleteNinja}) => {
     )
 };
 
-export default Ninjas
+export default CSSModules(Ninjas, styles);
